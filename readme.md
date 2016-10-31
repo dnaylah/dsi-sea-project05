@@ -1,14 +1,10 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 5: Disaster Relief + Classification
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 5: Remote SQL + Classification
 
 ### Overview
 
 This week, you've learned about access and utilizing remote databases, and more advanced topics for conducting logistic regression. Now, let's put these skills to the test!
 
-You're working as a data scientist with a research firm that specializes in emergency management. In advance of client work, you've been asked to create and train a logistic regression model that can show off the firm's capabilities in disaster analysis.
-
-Frequently after a disaster, researchers and firms will come in to give an independent review of an incident. While your firm doesn't have any current client data it can share with you on disaster analysis, you have chosen to procure your own disaster information from a remote relational database.
-
-Since the data is stored remotely, you'll need to set up a connection and query the database (using Python!). After, you'll construct a logistic regression model and test/validate it's results so that it will be ready to deploy with a client. In this lab there are no wrong ways to collect the data as long as it is from a REMOTE SQL database (can be exported to .csv/.sql as long as the source is remote and noted). The titanic database is also banned from this project.
+Since your data is stored remotely, you'll need to set up a connection and query the database (using Python!). After, you'll construct a logistic regression model and test/validate it's results so that it will be ready to deploy with a client. In this lab there are no wrong ways to collect the data as long as it is from a REMOTE SQL database (can be exported to .csv/.sql as long as the source is remote and noted). The titanic database is also banned from this project.
 
 **Goal:** Your job is to perform the following tasks:
 
