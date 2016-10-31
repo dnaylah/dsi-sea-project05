@@ -8,7 +8,7 @@ You're working as a data scientist with a research firm that specializes in emer
 
 Frequently after a disaster, researchers and firms will come in to give an independent review of an incident. While your firm doesn't have any current client data it can share with you on disaster analysis, you have chosen to procure your own disaster information from a remote relational database.
 
-The data is stored remotely, so you'll need to set up a connection and query the database (using Python!). After, you'll construct a logistic regression model and test/validate it's results so that it will be ready to deploy with a client. In this lab there are no wrong ways to collect the data as long as it is from a REMOTE SQL database (can be exported to .csv/.sql as long as the source is remote and noted). The titanic database is also banned from this project.
+Since the data is stored remotely, you'll need to set up a connection and query the database (using Python!). After, you'll construct a logistic regression model and test/validate it's results so that it will be ready to deploy with a client. In this lab there are no wrong ways to collect the data as long as it is from a REMOTE SQL database (can be exported to .csv/.sql as long as the source is remote and noted). The titanic database is also banned from this project.
 
 **Goal:** Your job is to perform the following tasks:
 
