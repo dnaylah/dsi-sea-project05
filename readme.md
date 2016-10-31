@@ -6,9 +6,9 @@ This week, you've learned about access and utilizing remote databases, and more 
 
 You're working as a data scientist with a research firm that specializes in emergency management. In advance of client work, you've been asked to create and train a logistic regression model that can show off the firm's capabilities in disaster analysis.
 
-Frequently after a disaster, researchers and firms will come in to give an independent review of an incident. While your firm doesn't have any current client data that it can share with you so that you may test and deploy your model, it does have data from the 1912 titanic disaster that it has stored in a remote database.
+Frequently after a disaster, researchers and firms will come in to give an independent review of an incident. While your firm doesn't have any current client data it can share with you on disaster analysis, you have chosen to procure your own disaster information to test your mettle in the world of relational databases.
 
-In this project, we'll be using data on passengers from the Titanic disaster to show off your analytical capabilities. The data is stored in a remote database, so you'll need to set up a connection and query the database (using Python!). After, you'll construct a logistic regression model and test/validate it's results so that it will be ready to deploy with a client.
+The data is stored in a remote database, so you'll need to set up a connection and query the database (using Python!). After, you'll construct a logistic regression model and test/validate it's results so that it will be ready to deploy with a client. In this lab there are no wrong ways to collect the data as long as it is from a REMOTE SQL database (can be exported to .csv/.sql as long as the source is remote and noted). The titanic database is also banned from this project.
 
 **Goal:** Your job is to perform the following tasks:
 
@@ -36,6 +36,7 @@ In this project, we'll be using data on passengers from the Titanic disaster to 
 - A local PostgreSQL database housing your remote data.
 - A Jupyter Notebook with the required problem statement, goals, and technical data.
 - A written report of your findings that detail the accuracy and assumptions of your model.
+- You didn't use the titanic dataset
 
 - ***Bonus:***
 - Create a blog post of at least 500 words (and 1-2 graphics!) describing your data, analysis, and approach. Link to it in your Jupyter notebook.
@@ -64,13 +65,22 @@ Your data is stored within an AWS Postgres remote database. Here are your connec
 
 > Instructors: [A local dataset is provided for you here](./assets/data/)
 
-We have imported the Titanic data into an AWS PostgreSQL instance, which you can find by connecting here:
+#### Test Datasets
 
-    psql -h dsi.c20gkj5cvu3l.us-east-1.rds.amazonaws.com -p 5432 -U dsi_student titanic
-    password: gastudents
+Run the following code to connect to the test postgresql db (testing purposes):
 
-Alternatively, you can use a python library like pandas, sqlalchemy, or psycopg.
+    from sqlalchemy import create_engine
+    import pandas as pd
+    connect_param = 'postgresql://dsi_student:gastudents@dsi.c20gkj5cvu3l.us-east-1.rds.amazonaws.com:5432/titanic'
+    engine_titanic = create_engine(connect_param)
+    query = pd.read_sql("SELECT * FROM pg_catalog.pg_tables WHERE schemaname='public'", con=engine_titanic)
+    print query
 
+[Big Query](https://bigquery.cloud.google.com) is also a great resource to utilize when you are trying to collect data. Try using this query to pull in all the reddit comments with a specific word:
+
+    SELECT * FROM [pushshift:rt_reddit.comments@-3600000-] WHERE REGEXP_MATCH(LOWER(body),r'trump')
+
+The number after the comments denotes the recency of the post in milliseconds. 3600000 milliseconds = 1 hour.
 ---
 
 ### Suggested Ways to Get Started
