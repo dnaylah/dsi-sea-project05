@@ -81,6 +81,7 @@ Run the following code to connect to the test postgresql db (testing purposes):
     SELECT * FROM [pushshift:rt_reddit.comments@-3600000-] WHERE REGEXP_MATCH(LOWER(body),r'trump')
 
 The number after the comments denotes the recency of the post in milliseconds. 3600000 milliseconds = 1 hour.
+
 ---
 
 ### Suggested Ways to Get Started
