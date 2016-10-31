@@ -14,7 +14,7 @@ The data is stored in a remote database, so you'll need to set up a connection a
 
 - Collect your data from an AWS PostgreSQL instance, import it into your local PostgreSQL database, and then import with Python
 - Perform any necessary data wrangling in advance of building your model
-- Create a logistic regression model to figure out the likelihood of a passenger's survival
+- Create a logistic regression model to figure out the likelihood of a negative outcome given a feature
 - Gridsearch optimal parameters for the logistic regression model
 - Create a kNN model and optimize it's parameters with gridsearch
 - Examine and explain the confusion matrices and ROC curves
